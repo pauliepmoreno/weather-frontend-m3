@@ -1,0 +1,26 @@
+.place-card {
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+        background-color: $color-hover;
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__temp {
+        font-size: 1.1rem;
+    }
+
+    &--detail {
+        border-left: 4px solid $color-primary;
+    }
+}
+
+
+.btn-custom {
+    background-color: $color-primary;
+    color: white;
+}

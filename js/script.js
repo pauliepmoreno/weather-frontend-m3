@@ -211,18 +211,18 @@ if (document.getElementById("ciudadesClima")) {
 
     ciudades.forEach(function (ciudad) {
         const card = `
-        <div class="col-12 col-lg-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${ciudad.nombre}</h5>
-                    <p>${ciudad.emoji}</p>
-                    <p>${ciudad.temp}°C</p>
-                    <p>${ciudad.estado}</p>
-                    <a href="detalleLocalidad.html?ciudad=${ciudad.nombre}" class="btn btn-custom">Ver detalle</a>
-                </div>
+    <div class="col-12 col-lg-3">
+        <div class="card place-card">
+            <div class="card-body">
+                <h5 class="card-title place-card__name">${ciudad.nombre}</h5>
+                <p class="place-card__emoji">${ciudad.emoji}</p>
+                <p class="place-card__temp">${ciudad.temp}°C</p>
+                <p class="place-card__state">${ciudad.estado}</p>
+                <a href="detalleLocalidad.html?ciudad=${ciudad.nombre}" class="btn btn-custom">Ver detalle</a>
             </div>
         </div>
-    `;
+    </div>
+`;
         contenedor.insertAdjacentHTML("beforeend", card);
     });
 }
@@ -245,18 +245,18 @@ if (document.getElementById("datosCiudad")) {
     const contenedorDatosCiudad = document.getElementById("datosCiudad");
 
     const htmlCiudad = `
-     <div class="col-12">
-      <div class="card mb-4">
-    <div class="card-body">
-    <h2>${ciudad.nombre} ${ciudad.emoji}</h2>
-    <p>🌡️ Temperatura: ${ciudad.temp}°C</p>
-    <p>💧 Humedad: ${ciudad.humedad}%</p>
-    <p>💨 Viento: ${ciudad.viento} km/h</p>
-    <p>${ciudad.estado}</p>
+    <div class="col-12">
+        <div class="card place-card place-card--detail mb-4">
+            <div class="card-body">
+                <h2 class="place-card__name">${ciudad.nombre} ${ciudad.emoji}</h2>
+                <p class="place-card__temp">🌡️ Temperatura: ${ciudad.temp}°C</p>
+                <p class="place-card__humidity">💧 Humedad: ${ciudad.humedad}%</p>
+                <p class="place-card__wind">💨 Viento: ${ciudad.viento} km/h</p>
+                <p class="place-card__state">${ciudad.estado}</p>
             </div>
-         </div>
-         </div>
-    `;
+        </div>
+    </div>
+`;
 
     contenedorDatosCiudad.innerHTML = htmlCiudad;
 
@@ -264,16 +264,16 @@ if (document.getElementById("datosCiudad")) {
 
     ciudad.pronostico.forEach(function (dia) {
         const card2 = `
-        <div class="col-12 col-lg-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${dia.dia}</h5>
-                    <p>${dia.emoji}</p>
-                    <p>${dia.temp}°C</p>
-                </div>
+    <div class="col-12 col-lg-3">
+        <div class="card place-card">
+            <div class="card-body">
+                <h5 class="card-title place-card__name">${dia.dia}</h5>
+                <p class="place-card__emoji">${dia.emoji}</p>
+                <p class="place-card__temp">${dia.temp}°C</p>
             </div>
         </div>
-    `;
+    </div>
+`;
         contenedorPronoSemAct.insertAdjacentHTML("beforeend", card2);
     });
 

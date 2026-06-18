@@ -3,7 +3,7 @@
 Aplicación de clima que muestra el estado del tiempo en ciudades icónicas del mundo.
 
 ## 🔗 Repositorio
-https://github.com/pauliepmoreno/weather-frontend-m2
+https://github.com/pauliepmoreno/weather-frontend-m3
 
 ## Cómo ejecutar
 Clonar el repositorio y abrir `index.html` en el navegador.
